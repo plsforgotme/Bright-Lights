@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War For Love | PLSForgotme</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/0b2885cd68.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-top__wrapper">
+            <div class="header-top">
+                <div class="header-top__logos header-top__content">
+                    <img src="assets/images/wfl-logo-img.png" alt="" class="header-top__logos-logo">
+                    <img src="assets/images/wfl-logo.png" alt="" class="header-top__logos-img">
+                </div>
+                <div class="header-top__main header-top__content">
+                    <p class="header-top__main-item">About</p>
+                    <p class="header-top__main-item">News</p>
+                    <p class="header-top__main-item">Music</p>
+                    <p class="header-top__main-item">Media</p>
+                    <p class="header-top__main-item">Tours</p>
+                    <p class="header-top__main-item">Contacts</p>
+                </div>
+            </div>
+            <div class="header-hero">
+                <span class="header-hero__span">
+                    New Single
+                </span>
+                <h1>War For Love</h1>
+                <div class="header-hero__player">
+                    <i onclick="headerHeroPlayerPlayPause()" src="assets/images/wfl-play-button.svg" alt=""
+                        class="fa-solid fa-play" id="header-hero__player-playBtn"></i>
+                    <audio controls autoplay="0" id="header-hero__player-song">
+                        <source src="assets/audios/Bright Lights - War For Love.mp3" type="audio/mpeg">
+                    </audio>
+                    <input class="header-hero__player-progressbar" type="range" value="0"
+                        id="header-hero__player-progress">
+                    <div class="header-hero__timer">
+                        <p id="header-hero__timer" class="header-hero__timer">
+                            00:00-02:54
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container main-preview__container">
+            <div class="main-preview__imgs">
+                <div class="main-preview__imgs-span__wrapper">
+                    <span class="main-preview-imgs-span">
+                        Working on my upcoming full-lenth album that`s releasing later this year.
+                    </span>
+                </div>
+            </div>
+            <div class="main-preview__imgs">
+                <div class="main-preview__imgs-span__wrapper">
+                    <span class="main-preview-imgs-span">
+                        Halloween vibes. <br>
+                        Listen my new track!
+                    </span>
+                </div>
+            </div>
+            <div class="main-preview__imgs">
+                <div class="main-preview__imgs-span__wrapper">
+                    <span class="main-preview-imgs-span">
+                        WarForLove is OUT NOW!! <br> Stream it here!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <section class="about">
+            <div class="container about-container">
+                <div class="about-top">
+                    <h2 class="about-title">
+                        Bright Lights
+                    </h2>
+                </div>
+                <div class="about-main">
+                    <div class="about-main__coloumn">
+                        <p class="about-main__description">
+                            Bright Lights is a multi-Grammy nominated singer, songwriter, DJ and record producer. She
+                            has
+                            written for numerous pop stars including Britney Spears, Justin Bieber, Usher and Beyoncé.
+                            Her catalog has amassed
+                            over 1 billion streams worldwide. More than 100 million of those streams can be attributed
+                            to
+                            her artist career and include such hits as Porter Robinson's "Language," 3LAU's "How You
+                            Love
+                            Me" and her own single "Runaway." She was also a featured vocalist on Zedd's #1 Clarity
+                            album.
+                            Her latest music video, "Put It Down," reached 1 million streams in the first week,
+                            releasing
+                            independently. Bright Lights is currently in the studio working on a self-produced album
+                            slated
+                            for release in 2020.
+                        </p>
+                        <div class="about-facts">
+                            <div class="about-facts__row">
+                                <div class="about-facts__item">
+                                    <img src="assets/images/wfl-rectangle.svg" alt="" class="about-facts__item-img">
+                                    <span class="about-facts__item-span">Based in: Los Angeles</span>
+                                </div>
+                                <div class="about-facts__item">
+                                    <img src="assets/images/wfl-rectangle.svg" alt="" class="about-facts__item-img">
+                                    <span class="about-facts__item-span">Genre: #DancePop</span>
+                                </div>
+                            </div>
+                            <div class="about-facts__row">
+                                <div class="about-facts__item">
+                                    <img src="assets/images/wfl-rectangle.svg" alt="" class="about-facts__item-img">
+                                    <span class="about-facts__item-span">Founded in 2011</span>
+                                </div>
+                                <div class="about-facts__item">
+                                    <img src="assets/images/wfl-rectangle.svg" alt="" class="about-facts__item-img">
+                                    <span class="about-facts__item-span">Label: 333 Recordings</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-main__coloumn">
+                        <div class="about-main__photos">
+                            <img src="assets/images/wfl-about-photo1.png" alt="" class="about-main__photos-photo">
+                            <img src="assets/images/wfl-about-photo2.png" alt="" class="about-main__photos-photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="quote">
+            <div class="container quote-wrapper">
+                <div class="quote-main">
+                    <span class="quote-main__span">
+                        “In an age where mainstream music is designed to be as
+                        easily consumed as possible, listening to Bright Lights is
+                        refreshing, to say the least. Her sound is perfect for radio
+                        but complex enough to separate her from other pop newcomers.”
+                    </span>
+                    <a class="quote-main__link" href="https://soundcloud.com/populove", target="_blank">PopULove.net</a>
+                </div>
+                <div class="quote-main__photo"></div>
+            </div>
+        </section>
+        <section class="last-track">
+            <div class="container">
+                <div class="lt-cover">
+                    <div class="lt-cover__circle">
+                        <div class="lt-cover__circle">
+                            <div class="lt-cover__circle">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+
+    </footer>
+
+    <script>
+
+        let progress = document.getElementById("header-hero__player-progress")
+        let song = document.getElementById("header-hero__player-song")
+        let playBtn = document.getElementById("header-hero__player-playBtn")
+        let timer = document.getElementById("header-hero__timer")
+
+        song.onloadedmetadata = function () {
+            progress.max = song.duration;
+            progrsss.value = song.currentTime;
+            timer.max = song.duration;
+            progress.value = song.currentTime;
+        }
+
+        function headerHeroPlayerPlayPause() {
+            if (playBtn.classList.contains("fa-pause")) {
+                song.pause()
+                playBtn.classList.remove("fa-pause")
+                playBtn.classList.add("fa-play")
+            }
+
+            else if (playBtn.classList.contains("fa-play")) {
+                song.play()
+                playBtn.classList.remove("fa-play")
+                playBtn.classList.add("fa-pause")
+            }
+        }
+
+        function divisionWithRemainder(a, n) {
+            return ((a - (a % n)) / n)
+        }
+
+        if (song.play()) {
+            setInterval(() => {
+                progress.value = song.currentTime;
+                timer.textContent = "0" + String(divisionWithRemainder(Math.trunc(song.currentTime), 60)) + ":" + String(Math.trunc(song.currentTime) % 60) + "-" + String(divisionWithRemainder(Math.trunc(song.duration), 60)) + ":" + String(Math.trunc(song.duration) % 60);
+            }, 500);
+        }
+
+        if (song.currentTime == song.duration) {
+            song.currentTime = 0
+        }
+
+
+        progress.onchange = function () {
+            song.play();
+            song.currentTime = progress.value
+        }
+
+
+    </script>
+</body>
+
+</html>

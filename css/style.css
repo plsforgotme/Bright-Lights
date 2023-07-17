@@ -1,0 +1,448 @@
+@font-face {
+    font-family: "Poppins-SB";
+    src: url(../assets/fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-M";
+    src: url(../assets/fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-B";
+    src: url(../assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-R";
+    src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+html {
+    background: #1C1B21;
+}
+
+header {
+    height: 1000px;
+    background: no-repeat center/cover url(../assets/images/header-bg.png);
+}
+
+h1 {
+    font-family: "Poppins-SB";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+}
+
+h2 {
+    color: var(--white, #FFF);
+    font-family: "Poppins-B", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+input[type=range] {
+    height: 26px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 887px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #50555C;
+    background: #FFFFFF;
+    border-radius: 0px;
+    border: 0px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 2px;
+    border-radius: 0px;
+    background: #7A66CC;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -9px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FFFFFF;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #50555C;
+    background: #FFFFFF;
+    border-radius: 0px;
+    border: 0px solid #000000;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 2px;
+    border-radius: 0px;
+    background: #7A66CC;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #FFFFFF;
+    border: 0px solid #000000;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #50555C;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #FFFFFF;
+    border: 0px solid #000000;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #50555C;
+}
+
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 2px;
+    border-radius: 0px;
+    background: #7A66CC;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #FFFFFF;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #FFFFFF;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.header-top__wrapper {
+    flex-direction: column;
+    gap: 320px;
+}
+
+.main-preview__container {
+    gap: 30px;
+}
+
+.about-container {
+    flex-direction: column;
+}
+
+.header-top {
+    padding: 0 95px;
+    padding-top: 30px;
+    display: flex;
+    gap: 65px;
+    align-items: center;
+}
+
+.header-top__logos {
+    gap: 20px;
+}
+
+.header-top__main {
+    display: flex;
+    gap: 56px;
+    color: var(--white, #FFF);
+    font-family: "Poppins-SB", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.header-top__content {
+    display: flex;
+    align-items: center;
+}
+
+.header-hero__player {
+    display: flex;
+}
+
+.header-hero__span {
+    color: var(--white, #FFF);
+    font-family: "Poppins-SB", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.header-hero__player {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding-top: 50px;
+}
+
+.header-hero__player-progressbar {
+    width: 887px;
+}
+
+.header-hero__timer p {
+    color: var(--white, #FFF);
+    text-align: right;
+    font-family: "Poppins-SB", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.fa-play,
+.fa-pause {
+    color: #fff;
+    width: 25px;
+    height: 22px;
+    fill: var(--white, #FFF);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+audio {
+    display: none;
+}
+
+.main-preview__imgs {
+    display: flex;
+    border-radius: 20px 0px;
+    width: 350px;
+    height: 300px;
+    background: no-repeat center/100% url(../assets/images/wfl-preview1.png);
+    align-items: end;
+    justify-content: center;
+}
+
+.main-preview__imgs:nth-child(2) {
+    background: no-repeat center/100% url(../assets/images/wfl-preview2.png);
+}
+
+.main-preview__imgs:last-child {
+    background: no-repeat center/100% url(../assets/images/wfl-preview3.png);
+}
+
+.main-preview-imgs-span {
+    color: var(--white, #FFF);
+    font-family: "Poppins-M", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: 1;
+    width: 310px;
+    height: 42px;
+}
+
+.main-preview__imgs-span__wrapper {
+    display: flex;
+    width: 350px;
+    height: 90px;
+    border-radius: 20px 0px;
+    background: var(--accent, rgba(122, 102, 204, 0.699999988079071));
+    align-items: center;
+    justify-content: center;
+}
+
+.about {
+    padding-top: 180px;
+}
+
+.about-main {
+    display: flex;
+    gap: 125px;
+}
+
+.about-main__coloumn:first-child {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    width: 540px;
+    gap: 60px;
+}
+
+.about-main__description {
+    color: var(--white, #FFF);
+    font-family: "Poppins-R", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.about-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-facts__row {
+    display: flex;
+    gap: 40px;
+}
+
+.about-facts__row:last-child {
+    gap: 92px;
+}
+
+.about-facts__item {
+    display: flex;
+    gap: 20px;
+}
+
+.about-main__description {
+    color: var(--white, #FFF);
+    font-family: "Poppins-R", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.699999;
+}
+
+.about-facts__item-span {
+    color: var(--white, #FFF);
+    font-family: "Poppins-SB", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.about-main__photos {
+    width: 445px;
+    height: 466px;
+    position: relative;
+}
+
+.about-main__photos-photo {
+    position: absolute;
+}
+
+.about-main__photos-photo:first-child {
+    bottom: 0;
+    right: 0;
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    height: 483px;
+    align-items: center;
+}
+
+.quote-wrapper {
+    border-radius: 30px 0px;
+    border: 2px solid white;
+    height: 313px;
+    align-items: center;
+    padding-left: 80px;
+    position: relative;
+}
+
+.quote-main {
+    align-items: center;
+}
+
+.quote-main__span {
+    background: no-repeat url(../assets/images/wfl-quotes.svg);
+    color: var(--white, #FFF);
+    font-family: "Poppins-R", sans-serif;
+    display: flex;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 136px;
+    width: 520px
+}
+
+.quote-main__link {
+    color: var(--accent, #7A66CC);
+    font-family: "Poppins-B", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    align-items: flex-end;
+    height: 52px;
+    border-top: 1px solid white;
+    margin-top: 25px;
+}
+
+.quote-main__photo {
+    background: url(../assets/images/wfl-quotes-photo.png);
+    position: absolute;
+    padding-left: 60px;
+    width: 370px;
+    height: 483px;
+    right: 80px;
+}
+
+
+.lt-cover__circle {
+    border: 19px solid #7A66CC;
+    border-radius: 50%;
+    opacity: 0.30000001192092896;
+    background: var(--accent, #7A66CC);
+    width: 510px;
+    height: 510px;
+}
+
+.lt-cover__circle:nth-child(2) {
+    opacity: 0.6000000238418579;
+    background: var(--accent, #7A66CC);
+    width: 472.222px;
+    height: 472.222px;
+}
+
+.lt-cover__circle:last-child {
+    opacity: 1;
+    width: 434.444px;
+    height: 434.444px;
+    background: url(../assets/images/wfl-lt-cover.png);
+}
