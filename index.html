@@ -8,7 +8,11 @@
     <title>War For Love | PLSForgotme</title>
 
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    
     <link rel="stylesheet" href="css/style.css">
+    
 
     <script src="https://kit.fontawesome.com/0b2885cd68.js" crossorigin="anonymous"></script>
 </head>
@@ -36,8 +40,8 @@
                 </span>
                 <h1>War For Love</h1>
                 <div class="header-hero__player">
-                    <i onclick="headerHeroPlayerPlayPause()" src="assets/images/wfl-play-button.svg" alt=""
-                        class="fa-solid fa-play" id="header-hero__player-playBtn"></i>
+                    <i onclick="clickPlayBtn(1)" src="assets/images/wfl-play-button.svg" alt="" class="fa-solid fa-play"
+                        id="header-hero__player-playBtn"></i>
                     <audio controls autoplay="0" id="header-hero__player-song">
                         <source src="assets/audios/Bright Lights - War For Love.mp3" type="audio/mpeg">
                     </audio>
@@ -144,78 +148,235 @@
                         refreshing, to say the least. Her sound is perfect for radio
                         but complex enough to separate her from other pop newcomers.”
                     </span>
-                    <a class="quote-main__link" href="https://soundcloud.com/populove", target="_blank">PopULove.net</a>
+                    <a class="quote-main__link" href="https://soundcloud.com/populove" ,
+                        target="_blank">PopULove.net</a>
                 </div>
                 <div class="quote-main__photo"></div>
             </div>
         </section>
         <section class="last-track">
-            <div class="container">
+            <div class="container lt-container">
                 <div class="lt-cover">
-                    <div class="lt-cover__circle">
-                        <div class="lt-cover__circle">
-                            <div class="lt-cover__circle">
-
-                            </div>
+                    <div class="lt-cover__circle-1">
+                        <div class="lt-cover__circle-2">
+                            <div class="lt-cover__circle-img"></div>
                         </div>
                     </div>
                 </div>
+                <div class="lt-main">
+                    <h2>Last tracks</h2>
+                    <div class="lt-main__player">
+                        <i onclick="clickPlayBtn(2)" src="assets/images/wfl-play-button.svg" alt=""
+                            class="fa-solid fa-play" id="lt-main__player-playBtn"></i>
+                        <audio controls id="lt-main__player-song">
+                            <source id="lt-main__player-song__source"
+                                src="assets/audios/Pink Is Punk & Benny Benassi feat. Bright Lights - Ghost (Original Extended).mp3"
+                                type="audio/mpeg">
+                        </audio>
+                        <input class="lt-main__player-progressbar" type="range" value="0" id="lt-main__player-progress">
+                        <div class="lt-main__timer">
+                            <p id="lt-main__timer" class="lt-main__timer">
+                                00:00-02:54
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="lt-main__player-song__list">
+                        <li onclick="changeCuurrentTrack(1)" id="lt-player__list-item1"
+                            class="lt-main__player-song__list-item">
+                            <span class="lt-main__player-song__list-item__span">01</span>
+                            <p id="lt-main__player-song__list-item__p-1" class="lt-main__player-song__list-item__p">
+                                3LAU, Bright Lights - How You Love Me</p>
+                        </li>
+                        <li onclick="changeCuurrentTrack(2)" id="lt-player__list-item2"
+                            class="lt-main__player-song__list-item">
+                            <span class="lt-main__player-song__list-item__span">02</span>
+                            <p id="lt-main__player-song__list-item__p-2" class="lt-main__player-song__list-item__p">
+                                Kaleenda Zanders, Kandy, Bright Lights - War
+                                For Love</p>
+                        </li>
+                        <li onclick="changeCuurrentTrack(3)" id="lt-player__list-item3"
+                            class="lt-main__player-song__list-item">
+                            <span class="lt-main__player-song__list-item__span">03</span>
+                            <p id="lt-main__player-song__list-item__p-3" class="lt-main__player-song__list-item__p">Pink
+                                Is Punk, Benny Benassi, Bright Lights -
+                                Ghost</p>
+                        </li>
+                        <li onclick="changeCuurrentTrack(4)" id="lt-player__list-item4"
+                            class="lt-main__player-song__list-item">
+                            <span class="lt-main__player-song__list-item__span">04</span>
+                            <p id="lt-main__player-song__list-item__p-4" class="lt-main__player-song__list-item__p">
+                                Hardwell, Dyro, Bright Lights — Never Say
+                                Goodbye</p>
+                        </li>
+                        <li onclick="changeCuurrentTrack(5)" id="lt-player__list-item5"
+                            class="lt-main__player-song__list-item">
+                            <span class="lt-main__player-song__list-item__span">05</span>
+                            <p id="lt-main__player-song__list-item__p-5" class="lt-main__player-song__list-item__p">Zeds
+                                Dead, Dirtyphonics, Bright Lights — Where
+                                Are You Now</p>
+                        </li>
+                        <li onclick="changeCuurrentTrack(6)" id="lt-player__list-item6"
+                            class="lt-main__player-song__list-item">
+                            <span class="lt-main__player-song__list-item__span">06</span>
+                            <p id="lt-main__player-song__list-item__p-6" class="lt-main__player-song__list-item__p">
+                                Zedd, Bright Lights — Follow You Down</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </section>
+        <section class="swiper">
+            <div class="swiper-button-next swiper-button"></div>
+            <div class="not-view-wrapper"> 
+                <div class="container card-container card-swiper">
+                    <div class="card-swiper swiper-wrapper">
+                        <div class="swiper-slide card-card"></div>
+                        <div class="swiper-slide card-card"></div>
+                        <div class="swiper-slide card-card"></div>
+                        <div class="swiper-slide card-card"></div>
+                        <div class="swiper-slide card-card"></div>
+                        <div class="swiper-slide card-card"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev swiper-button"></div>
         </section>
     </main>
     <footer class="footer">
 
     </footer>
 
+    <script src="js/cdn.jsdelivr.net_npm_swiper@10_swiper-bundle.min.js"></script>
+
     <script>
+        const headerProgress = document.getElementById("header-hero__player-progress")
+        const headerSong = document.getElementById("header-hero__player-song")
+        const headerPlayBtn = document.getElementById("header-hero__player-playBtn")
+        const headerTimer = document.getElementById("header-hero__timer")
 
-        let progress = document.getElementById("header-hero__player-progress")
-        let song = document.getElementById("header-hero__player-song")
-        let playBtn = document.getElementById("header-hero__player-playBtn")
-        let timer = document.getElementById("header-hero__timer")
+        const ltProgress = document.getElementById("lt-main__player-progress")
+        const ltSong = document.getElementById("lt-main__player-song")
+        const ltPlayBtn = document.getElementById("lt-main__player-playBtn")
+        const ltTimer = document.getElementById("lt-main__timer")
 
-        song.onloadedmetadata = function () {
-            progress.max = song.duration;
-            progrsss.value = song.currentTime;
-            timer.max = song.duration;
-            progress.value = song.currentTime;
-        }
-
-        function headerHeroPlayerPlayPause() {
-            if (playBtn.classList.contains("fa-pause")) {
-                song.pause()
-                playBtn.classList.remove("fa-pause")
-                playBtn.classList.add("fa-play")
-            }
-
-            else if (playBtn.classList.contains("fa-play")) {
-                song.play()
-                playBtn.classList.remove("fa-play")
-                playBtn.classList.add("fa-pause")
-            }
-        }
+        let currentTrackId = "lt-player__list-item1"
+        let songList = new Map()
+        songList.set(1, "3LAU - How You Love Me.mp3").set(2, "Bright Lights - War For Love.mp3").set(3, "Pink Is Punk & Benny Benassi feat. Bright Lights - Ghost (Original Extended).mp3").set(4, "Hardwell & Dyro feat. Bright Lights - Never Say Goodbye.mp3").set(5, "Zeds Dead & Dirtyphonics feat. Bright Lights - Where Are You Now.mp3").set(6, "Zedd, Bright Lights - Follow You Down.mp3")
+        console.log(songList)
 
         function divisionWithRemainder(a, n) {
             return ((a - (a % n)) / n)
         }
 
-        if (song.play()) {
-            setInterval(() => {
-                progress.value = song.currentTime;
-                timer.textContent = "0" + String(divisionWithRemainder(Math.trunc(song.currentTime), 60)) + ":" + String(Math.trunc(song.currentTime) % 60) + "-" + String(divisionWithRemainder(Math.trunc(song.duration), 60)) + ":" + String(Math.trunc(song.duration) % 60);
-            }, 500);
+        function changeStyleListItem(itemId) {
+            for (let i = 1; i <= 6; i++) {
+                document.getElementById("lt-main__player-song__list-item__p-" + String(i)).style.fontFamily = "Poppins-R"
+                document.getElementById("lt-main__player-song__list-item__p-" + String(i)).style.color = "#FFF"
+                document.getElementById("lt-main__player-song__list-item__p-" + String(i)).style.whiteSpace = "nowrap"
+            }
+
+            document.getElementById(itemId).style.fontFamily = "Poppins-B"
+            document.getElementById(itemId).style.color = "#7A66CC"
         }
 
-        if (song.currentTime == song.duration) {
-            song.currentTime = 0
+        headerSong.onloadedmetadata = function () {
+            headerProgress.max = headerSong.duration;
+            headerProgress.value = headerSong.currentTime;
+            headerTimer.max = headerSong.duration;
+            headerProgress.value = headerSong.currentTime;
         }
 
-
-        progress.onchange = function () {
-            song.play();
-            song.currentTime = progress.value
+        ltSong.onloadedmetadata = function () {
+            ltProgress.max = ltSong.duration;
+            ltProgress.value = ltSong.currentTime;
+            ltTimer.max = ltSong.duration;
+            ltProgress.value = ltSong.currentTime;
         }
 
+        function headerPlayer() {
+            if (headerPlayBtn.classList.contains("fa-play")) {
+                headerSong.play()
+                headerPlayBtn.classList.remove("fa-play")
+                headerPlayBtn.classList.add("fa-pause")
+            }
+
+            else {
+                headerSong.pause()
+                headerPlayBtn.classList.remove("fa-pause")
+                headerPlayBtn.classList.add("fa-play")
+            }
+
+            headerProgress.onchange = function () {
+                headerSong.currentTime = headerProgress.value
+            }
+
+            setInterval(
+                function () {
+                    headerProgress.value = headerSong.currentTime
+                    headerTimer.textContent = "0" + String(divisionWithRemainder(Math.trunc(headerSong.currentTime), 60)) + ":" + String(Math.trunc(headerSong.currentTime) % 60) + "-" + String(divisionWithRemainder(Math.trunc(headerSong.duration), 60)) + ":" + String(Math.trunc(headerSong.duration) % 60);
+                }, 500
+            )
+        }
+
+        function mainPlayer() {
+            if (ltPlayBtn.classList.contains("fa-play")) {
+                ltSong.play()
+                ltPlayBtn.classList.remove("fa-play")
+                ltPlayBtn.classList.add("fa-pause")
+            }
+
+            else {
+                ltSong.pause()
+                ltPlayBtn.classList.remove("fa-pause")
+                ltPlayBtn.classList.add("fa-play")
+            }
+
+            ltProgress.onchange = function () {
+                ltSong.currentTime = ltProgress.value
+            }
+
+            setInterval(
+                function () {
+                    ltProgress.value = ltSong.currentTime
+                    ltTimer.textContent = "0" + String(divisionWithRemainder(Math.trunc(ltSong.currentTime), 60)) + ":" + String(Math.trunc(ltSong.currentTime) % 60) + "-" + String(divisionWithRemainder(Math.trunc(ltSong.duration), 60)) + ":" + String(Math.trunc(ltSong.duration) % 60);
+                }, 500
+            )
+        }
+
+        function changeCuurrentTrack(trackId) {
+            currentTrackId = "lt-main__player-song__list-item__p-" + String(trackId)
+            changeStyleListItem(currentTrackId)
+            console.log("assets/audios/" + songList.get(trackId))
+            document.getElementById("lt-main__player-song__source").setAttribute("src", "assets/audios/" + songList.get(trackId))
+        }
+
+        function clickPlayBtn(playerNum) {
+            if (playerNum == 1) {
+                headerPlayer()
+            }
+
+            else if (playerNum == 2) {
+                mainPlayer()
+            }
+        }
+
+        changeStyleListItem("lt-main__player-song__list-item__p-1")
+
+        var swiper = new Swiper(".card-swiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
 
     </script>
 </body>

@@ -1,3 +1,9 @@
+@media screen and (max-width: 768px) {
+    html {
+        display: none;
+    }
+}
+
 @font-face {
     font-family: "Poppins-SB";
     src: url(../assets/fonts/Poppins/Poppins-SemiBold.ttf);
@@ -16,6 +22,13 @@
 @font-face {
     font-family: "Poppins-R";
     src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+p,
+span,
+h1,
+h2 {
+    animation: ease-in;
 }
 
 html {
@@ -51,6 +64,9 @@ input[type=range] {
     height: 26px;
     -webkit-appearance: none;
     margin: 10px 0;
+}
+
+.header-hero__player-progressbar {
     width: 887px;
 }
 
@@ -423,26 +439,128 @@ audio {
     right: 80px;
 }
 
+.last-track {
+    padding-top: 180px;
+    display: flex;
+}
 
-.lt-cover__circle {
-    border: 19px solid #7A66CC;
+.lt-container {
+    display: flex;
+    align-items: center;
+    height: 584px;
+    gap: 60px;
+}
+
+.lt-cover__circle-1 {
+    border: 19px solid rgba(122, 102, 204, 0.300000000);
     border-radius: 50%;
-    opacity: 0.30000001192092896;
-    background: var(--accent, #7A66CC);
     width: 510px;
     height: 510px;
 }
 
-.lt-cover__circle:nth-child(2) {
-    opacity: 0.6000000238418579;
-    background: var(--accent, #7A66CC);
+.lt-cover__circle-2 {
+    border: 19px solid rgba(122, 102, 204, 0.600000000);
+    border-radius: 50%;
     width: 472.222px;
     height: 472.222px;
 }
 
-.lt-cover__circle:last-child {
-    opacity: 1;
+.lt-cover__circle-img {
     width: 434.444px;
     height: 434.444px;
     background: url(../assets/images/wfl-lt-cover.png);
+}
+
+.lt-main {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.lt-main__player {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.lt-main__timer {
+    color: var(--white, #FFF);
+    text-align: left;
+    font-family: "Poppins-M", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.lt-main__player-song__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lt-main__player-song__list-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.lt-main__player-song__list-item__p {
+    color: var(--white, #FFF);
+    font-family: "Poppins-R", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.lt-main__player-song__list-item__p:hover {
+    font-family: "Poppins-B", sans-serif;
+    color: #7A66CC;
+    white-space: nowrap;
+}
+
+.lt-main__player-song__list-item__span {
+    color: var(--white, #FFF);
+    font-family: "Poppins-B", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    opacity: 0.5;
+}
+
+.lt-main__player-progressbar {
+    width: 317px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper {
+    display: flex;
+    gap: 40px;
+}
+
+.card-card {
+    border-radius: 30px 0px;
+    background: #2F2B2B;
+    width: 350px;
+    height: 473px;
+}
+
+.card-swiper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-button {
+
 }
